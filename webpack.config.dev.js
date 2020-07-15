@@ -15,13 +15,11 @@ module.exports = {
     contentBase: `${__dirname}/dist`,
   },
   entry: [
-    // '@babel/polyfill',
     `${__dirname}/src/App.js`,
   ],
   output: {
     filename: '[name].[hash].js',
     path: `${__dirname}/dist`,
-    // publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -30,11 +28,11 @@ module.exports = {
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'babel-loader',
-      // },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
       {
         test: /\.css$/,
         use: [
@@ -42,14 +40,6 @@ module.exports = {
           'css-loader',
         ],
       },
-      // {
-      //   test: /\.(png|jpe?g|gif)$/i,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //     },
-      //   ],
-      // },
     ],
   },
 };

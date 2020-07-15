@@ -4,7 +4,6 @@ module.exports = {
   mode: 'production',
   target: 'web',
   entry: [
-    // '@babel/polyfill',
     `${__dirname}/src/App.js`,
   ],
   output: {
@@ -30,14 +29,6 @@ module.exports = {
           'css-loader',
         ],
       },
-      // {
-      //   test: /\.(png|jpe?g|gif)$/i,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //     },
-      //   ],
-      // },
     ],
   },
 };
